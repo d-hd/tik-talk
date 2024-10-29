@@ -6,6 +6,7 @@
   --light-color: #FFF;
   --primary-color: #AE7AFF;
   --grey-color: #5F646D;
+  --light-transparent: #FFFFFFBF;
 }
 
 *,
@@ -20,6 +21,10 @@ body {
   font-family: 'JetBrains Mono', sans-serif;
   background: var(--dark-color) url(/assets/images/bg.png) center/cover no-repeat;
   color: var(--light-color);
+}
+
+.hidden {
+  display: none;
 }
 
 .skill-tag {

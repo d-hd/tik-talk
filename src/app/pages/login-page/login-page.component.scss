@@ -7,3 +7,31 @@
   grid-gap: 232px;
   width: fit-content;
 }
+
+.login-logo {
+  place-self: center;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: none;
+  color: var(--light-transparent);
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    color: var(--primary-color);
+  }
+}
+
+.password-eye-icon {
+  width: 20px;
+  height: 20px;
+}
