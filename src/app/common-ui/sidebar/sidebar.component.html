@@ -1,1 +1,39 @@
-<p>sidebar works!</p>
+<img
+  src="/assets/svg/logo-small.svg"
+  alt="Логотип"
+  class="ml16 mb20"
+>
+
+<nav class="mb20">
+  <ul class="main-menu-list">
+    <li *ngFor="let menuItem of menuItems">
+      <button class="menu-item">
+        <svg
+          [icon]="menuItem.icon"
+          class="menu-icon"
+        />
+        <span>{{ menuItem.label }}</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<p class="mb20 medium-text">Подписчики</p>
+
+
+<app-subscruber-card *ngFor="let subscriber of subscribers$ | async"
+  [profile]="subscriber">
+</app-subscruber-card>
+
+<div class="mt20 to-subscribers">
+  <a
+    [routerLink]="['/subscribers']"
+    class="to-subscribers-link medium-text"
+  >
+    Все подписчики
+    <svg
+      icon="arrow-left"
+      class="to-subscribers-icon"
+    />
+  </a>
+</div>
